@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes chewAnimation {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    25% {
+      transform: scaleY(0.4) scaleX(1.15);
+    }
+    50% {
+      transform: scaleY(0.9) scaleX(0.95);
+    }
+    75% {
+      transform: scaleY(0.35) scaleX(1.1);
+    }
+  }
+
+  @keyframes floatUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px) scale(0.6);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-20px) scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-40px) scale(0.9);
+    }
+  }
+
+  @keyframes spinSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinReverseSlow {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-chew {
+    animation: chewAnimation 0.35s ease-in-out infinite;
+  }
+
+  .animate-float-up {
+    animation: floatUp 1.2s ease-out forwards;
+  }
+
+  .animate-float-up-delayed {
+    animation: floatUp 1.4s ease-out 0.2s forwards;
+  }
+
+  .animate-spin-slow {
+    animation: spinSlow 20s linear infinite;
+  }
+
+  .animate-spin-reverse-slow {
+    animation: spinReverseSlow 25s linear infinite;
+  }
+
+  @keyframes foodFlyIntoMouth {
+    0% {
+      opacity: 0.9;
+      transform: translate(-50%, -50%) scale(1.3);
+    }
+    40% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.1) rotate(15deg);
+    }
+    85% {
+      opacity: 0.9;
+      transform: translate(-50%, -50%) scale(0.4) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.05);
+    }
+  }
+
+  .animate-food-enter-mouth {
+    animation: foodFlyIntoMouth 0.55s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+}
+

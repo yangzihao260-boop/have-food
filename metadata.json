@@ -1,0 +1,6 @@
+{
+  "name": "Mealtime English Learning Game",
+  "description": "Interactive English teaching game for kids learning 'I have breakfast in the morning', 'I have lunch at noon', and 'I have dinner at night'.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
